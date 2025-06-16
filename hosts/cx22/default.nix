@@ -1,8 +1,4 @@
-{
-  outputs,
-  pkgs,
-  ...
-}:
+{ outputs, ... }:
 
 {
   imports = [
@@ -12,22 +8,12 @@
 
     ./boot.nix
     ./hardware.nix
+
+    ../../users/alice
   ];
 
   networking.hostName = "cx22";
   networking.domain = "example.com"; # FIXME: Set your domain
-
-  users.users = {
-    alice = {
-      name = "Alice";
-      home = "/home/alice";
-      isNormalUser = true;
-      shell = pkgs.zsh;
-      initialPassword = "changeme";
-      extraGroups = [ "wheel" ];
-      openssh.authorizedKeys.keyFiles = [ ../../users/alice/pubkeys/replaceme.pub ]; # FIXME: Set your pubkey
-    };
-  };
 
   system.stateVersion = "25.05";
 }
