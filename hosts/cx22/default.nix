@@ -9,7 +9,7 @@
     ./boot.nix
     ./hardware.nix
 
-    ../../users/alice
+    ../../users/clinton
   ];
 
   networking.hostName = "cx22";
