@@ -13,7 +13,7 @@
   ];
 
   networking.hostName = "cx22";
-  networking.domain = "example.com"; # FIXME: Set your domain
+  networking.domain = "lintesting.com"; # FIXME: Set your domain
 
   system.stateVersion = "25.05";
 }
