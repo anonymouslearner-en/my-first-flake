@@ -13,7 +13,7 @@
   ];
 
   networking.hostName = "cx22";
-  networking.domain = "lintesting.com"; # FIXME: Set your domain
+  networking.domain = "lint-ee.nixos.ovh"; # FIXME: Set your domain
 
   system.stateVersion = "25.05";
 }
